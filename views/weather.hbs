@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="https://img.icons8.com/cotton/50/000000/partly-cloudy-day--v3.png" />
+    <title>Weather</title>
+  </head>
+  <body>
+    {{>header}}
+    <div class="formDiv">
+      <h1>Weather Data 
+        <span>
+          <img src={{data.weather.weather_icons}} style="max-width: 30px; border-radius:99%" alt="weather">
+          </span>
+          </h1>
+      
+      <Table>
+        <tr>
+        <td>Temperature : </td>
+        <td>{{data.weather.temperature}}&deg;c</td>
+        </tr>
+        <tr>
+        <td>Humidity : </td>
+        <td>{{data.weather.humidity}}</td>
+        </tr>
+        <tr>
+        <td>Pressure : </td>
+        <td>{{data.weather.pressure}}</td>
+        </tr>
+        <tr>
+        <td>Cloud Cover : </td>
+        <td>{{data.weather.cloudcover}}</td>
+        </tr>
+        <tr>
+        <td>Feels Like : </td>
+        <td>{{data.weather.feelslike}}</td>
+        </tr>
+        <tr>
+        <td>Weather Descriptions : </td>
+        <td>{{data.weather.weather_descriptions}}</td>
+        </tr>
+        <tr>
+        <td>Visibility : </td>
+        <td>{{data.weather.visibility}}</td>
+        </tr>
+        <tr>
+        <td>Wind Direction : </td>
+        <td>{{data.weather.wind_dir}}</td>
+        </tr>
+      </Table>
+    </div>
+    <div class="formDiv">
+      <h1>Location Data</h1>
+      <Table border="1" slot="1">
+        <tr>
+          <td>Location :</td>
+          <td> {{data.location.place}}</td>
+        </tr>
+        <tr>
+          <td>Latitude :</td>
+          <td> {{data.location.latitude}}</td>
+          </tr>
+        <tr>
+          <td>Longitude :</td>
+          <td> {{data.location.longitude}}</td>
+          </tr>
+      </Table>
+    </div>
+  </body>
+    <script src="js/app.js"></script>
+  {{>footer}}
+</html>
