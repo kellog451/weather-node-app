@@ -4,6 +4,7 @@ const hbs = require("hbs");
 const { map, weather } = require("./utils/weather");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 const publicDirectoryPath = path.join(__dirname, "../public");
 const commonPath = path.join(__dirname, "../common");
